@@ -162,7 +162,116 @@ Using Binary Search:
 Found: ID: 107, Name: Mango, Category: Groceries
 
 ---
+# WEEK 1 - Financial Forecasting Tool
 
+This is a beginner-friendly C# console application that predicts future financial values using two approaches:
+
+- Recursive Approach
+- Optimized Iterative Approach
+
+It takes an initial value, a yearly growth rate, and the number of years to forecast, then calculates the expected value in the future.
+
+---
+
+## 1. What is Recursion?
+
+Recursion is a concept where a function calls itself.  
+It is useful for solving problems that can be broken down into smaller subproblems.
+
+In this case, forecasting a value year-by-year can be done recursively:  
+Each year's value is built on the previous year's growth.
+
+---
+
+## 2. Recursive Method to Calculate Future Value
+
+We use a recursive function where:
+
+- Base case: If years = 0, return current value.  
+- Recursive step: Multiply value by (1 + rate), and call the function for (years - 1).
+
+This mimics how a value grows year by year.
+
+---
+
+## 3. Recursive Forecast Implementation
+
+A simple recursive method calculates the future value by repeating the same formula over years.
+
+### Formula used:
+FutureValue(years) = FutureValue(years - 1) * (1 + growthRate)
+
+---
+
+## 4. Time Complexity and Optimization
+
+### Time Complexity of Recursive Approach:
+- Time: O(n) (one call per year)
+- Space: O(n) (due to function call stack)
+
+### Optimization:
+The same result can be calculated using a loop (iterative method).  
+This avoids deep recursion and is better for large year values.
+
+### Time Complexity of Iterative Approach:
+- Time: O(n)
+- Space: O(1)
+
+---
+
+## 5. When to Use Recursive vs Iterative?
+
+| Use Case                      | Preferred Method       |
+|-------------------------------|------------------------|
+| Small number of years         | Recursive or Iterative |
+| Large number of years         | Iterative (more efficient) |
+| Educational / learning purpose| Recursive              |
+
+---
+
+## 6. How to Run (Step-by-step in Console)
+
+1. Create a new project  
+   `dotnet new console -n financial_forecast_project`
+
+2. Navigate into the project folder  
+   `cd financial_forecast_project`
+
+3. Rename the default main file  
+   `ren Program.cs financial_forecast_main.cs`
+
+4. Create the recursive logic file  
+   `notepad financial_forecast_recursive.cs`  
+   (Paste the recursive code and save)
+
+5. Create the optimized logic file  
+   `notepad financial_forecast_optimized.cs`  
+   (Paste the optimized code and save)
+
+6. Edit the main file  
+   `notepad financial_forecast_main.cs`  
+   (Paste the main method code and save)
+
+7. Build the project  
+   `dotnet build`
+
+8. Run the program  
+   `dotnet run`
+
+---
+## 7. Sample Input & Output
+
+**Input:**
+Enter current value: 1528
+Enter annual growth rate: 0.07
+Enter number of years: 5
+**Output:**
+Using Recursive Approach:
+Forecasted value: 2147.80
+
+Using Optimized Iterative Approach:
+Forecasted value: 2147.80
+---
 
 
 
