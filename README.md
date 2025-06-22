@@ -66,6 +66,60 @@ Opening an Excel Document...
 1. Open Command Prompt and go to the project folder:
 2. Build and run the project:
 
+   # WEEK 1 - E-commerce Platform
+
+This is a C# console application that allows users to search for products by name using linear and binary search methods.
+
+---
+
+## How to Run (All Steps in One Console)
+
+1. Open Command Prompt
+
+2. Create a new console project  
+   dotnet new console -n e_commerce_search
+
+3. Move into the project folder  
+   cd e_commerce_search
+
+4. Rename the default main file  
+   ren Program.cs e_commerce_main.cs
+
+5. Create the product class file  
+   notepad e_commerce_product.cs  
+   (Paste the product class code and save)
+
+6. Create the search logic file  
+   notepad e_commerce_searchlogic.cs  
+   (Paste the linear and binary search code and save)
+
+7. Edit the main file  
+   notepad e_commerce_main.cs  
+   (Paste the updated main method with the mixed product list and save)
+
+8. Build the project  
+   dotnet build
+
+9. Run the project  
+   dotnet run
+
+---
+
+## Sample Input and Output
+
+Input:  
+Mango
+
+Output:  
+Using Linear Search:  
+Found: ID: 107, Name: Mango, Category: Groceries
+
+Using Binary Search:  
+Found: ID: 107, Name: Mango, Category: Groceries
+
+
+
+
 
 
 
