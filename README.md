@@ -66,41 +66,85 @@ Opening an Excel Document...
 1. Open Command Prompt and go to the project folder:
 2. Build and run the project:
 
-   # WEEK 1 - E-commerce Platform
+  # WEEK 1 - E-commerce Platform
 
-This is a C# console application that allows users to search for products by name using linear and binary search methods.
+This is a beginner-friendly C# console application that allows users to search for products by name using linear and binary search algorithms.
 
 ---
 
-## How to Run (All Steps in One Console)
+## Q1: What is Big O Notation?
+
+Big O notation is used to describe how fast or slow an algorithm is as the input size increases.  
+It helps us understand the efficiency of algorithms.
+
+For example:
+- O(1): Constant time (very fast, does not depend on input size)
+- O(n): Linear time (slower as input grows)
+- O(log n): Logarithmic time (fast even for large inputs)
+
+---
+
+## Q2: Best, Average, and Worst-Case Scenarios
+
+| Search Type     | Best Case | Average Case | Worst Case |
+|-----------------|-----------|--------------|------------|
+| Linear Search   | O(1)      | O(n/2)       | O(n)       |
+| Binary Search   | O(1)      | O(log n)     | O(log n)   |
+
+- **Best Case**: When the target is found immediately  
+- **Average Case**: When the target is somewhere in the middle  
+- **Worst Case**: When the target is not found or is at the end
+
+---
+
+## Q3: Time Complexity Comparison
+
+| Algorithm       | Time Complexity | Requires Sorted Data |
+|-----------------|------------------|------------------------|
+| Linear Search   | O(n)             | No                     |
+| Binary Search   | O(log n)         | Yes                    |
+
+- Linear Search is slower but works on unsorted data  
+- Binary Search is faster but needs the list to be sorted
+
+---
+
+## Q4: Which Algorithm is Suitable?
+
+- **Use Linear Search** for small or unsorted product lists  
+- **Use Binary Search** when the product list is large and sorted
+
+---
+
+## How to Run This Program (All in One Console)
 
 1. Open Command Prompt
 
-2. Create a new console project  
+2. Create a new project  
    dotnet new console -n e_commerce_search
 
-3. Move into the project folder  
+3. Move into the folder  
    cd e_commerce_search
 
-4. Rename the default main file  
+4. Rename default file  
    ren Program.cs e_commerce_main.cs
 
-5. Create the product class file  
+5. Create product file  
    notepad e_commerce_product.cs  
-   (Paste the product class code and save)
+   (Paste the Product class and save)
 
-6. Create the search logic file  
+6. Create search logic file  
    notepad e_commerce_searchlogic.cs  
-   (Paste the linear and binary search code and save)
+   (Paste the linear and binary search methods and save)
 
-7. Edit the main file  
+7. Edit main file  
    notepad e_commerce_main.cs  
-   (Paste the updated main method with the mixed product list and save)
+   (Paste the main method with product list and save)
 
-8. Build the project  
+8. Build the program  
    dotnet build
 
-9. Run the project  
+9. Run the program  
    dotnet run
 
 ---
@@ -116,6 +160,10 @@ Found: ID: 107, Name: Mango, Category: Groceries
 
 Using Binary Search:  
 Found: ID: 107, Name: Mango, Category: Groceries
+
+---
+
+You can modify the product list to include different names and categories as needed.
 
 
 
