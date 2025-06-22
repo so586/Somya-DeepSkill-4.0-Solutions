@@ -163,7 +163,7 @@ Found: ID: 107, Name: Mango, Category: Groceries
 
 ---
 
-You can modify the product list to include different names and categories as needed.
+
 
 
 
