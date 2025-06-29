@@ -334,6 +334,38 @@ To perform advanced aggregation that allows multiple levels of summary in a sing
 ---
 
 
+## Exercise 2: Stored Procedure 
+
+# Week 2: Advanced SQL, NUnit, Moq
+
+## Stored Procedure Exercises (SQL Server)
+
+### Exercise 1: Get Employee Details by Department
+- Procedure: `sp_GetEmployeesByDepartments`
+- Takes `@department_id` and returns matching employee records
+
+Usage:
+EXEC sp_GetEmployeesByDepartments @department_id = 2;
+
+---
+
+### Exercise 2: Insert New Employee
+- Procedure: `sp_InsertEmployees`
+- Inserts a new employee with name, department, salary, and join date
+
+Usage:
+EXEC sp_InsertEmployees 'Somya', 'Singh', 3, 85000.75, '2024-08-29';
+
+---
+
+### Exercise 3: Total Salary by Department (Using Output)
+- Procedure: `sp_GetTotalSalaryByDepartment`
+- Returns total salary for a department using `@total_salary` as output
+
+Usage:
+DECLARE @salary DECIMAL(10,2);
+EXEC sp_GetTotalSalaryByDepartment 2, @salary OUTPUT;
+SELECT @salary AS TotalSalary;
 
 
 
