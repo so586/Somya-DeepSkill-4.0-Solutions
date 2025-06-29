@@ -1,0 +1,91 @@
+# NUnit Hands-On — Exercise 1: Unit Testing a Calculator
+
+##  Objective
+
+To learn how to write **unit tests** using **NUnit** for a simple calculator class in C#. You tested methods like `add`, `subtract`, `multiply`, and `divide`.
+
+---
+
+## Project Structure
+alculatorApp/
+│
+├── CalcLibrary/ # Class library with Calculator.cs
+│ └── Calculator.cs # Contains methods to add, subtract, multiply, divide
+│
+├── CalcLibraryTests/ # NUnit test project
+│ └── CalculatorTests.cs # Unit tests using NUnit
+│
+└── CalculatorSolution.sln # Solution file
+
+# NUnit Unit Testing Summary
+
+## Questions Asked and Answers
+
+### 1. What is Unit Testing?
+
+**Answer:**  
+Testing small parts of code, like one method or function, to check if it works correctly.
+
+---
+
+### 2. Why do we need unit testing?
+
+**Answer:**  
+To find bugs early and make sure each part of your program works the way you expect.
+
+---
+
+### 3. What is NUnit?
+
+**Answer:**  
+NUnit is a tool in C# that helps you write and run unit tests.
+
+---
+
+### 4. What are `[Test]` and `[TestCase]`?
+
+**Answer:**
+- `[Test]`: Marks a method as a test.
+- `[TestCase]`: Lets you run the same test with different inputs.
+
+---
+
+### 5. What is `[SetUp]`?
+
+**Answer:**  
+It runs before every test to set things up (like creating objects).
+
+---
+
+### 6. What is `[TearDown]`?
+
+**Answer:**  
+It runs after every test to clean up or show messages.
+
+---
+
+### 7. What does `Assert.That()` do?
+
+**Answer:**  
+It checks if the actual result matches the expected result.
+
+---
+
+### 8. What is `[Ignore]`?
+
+**Answer:**  
+It skips a test. You can use it if a test is not ready yet.
+
+---
+
+## Example Tests
+
+```csharp
+[TestCase(10, 20, 30)]
+[TestCase(0, 0, 0)]
+public void Add_MultipleNums_ReturnSum(int x, int y, int expected)
+{
+    int result = _calculator.add(x, y);
+    Assert.That(result, Is.EqualTo(expected));
+}
+
