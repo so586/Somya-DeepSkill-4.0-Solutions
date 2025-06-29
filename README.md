@@ -458,7 +458,64 @@ public void Add_MultipleNums_ReturnSum(int x, int y, int expected)
     int result = _calculator.add(x, y);
     Assert.That(result, Is.EqualTo(expected));
 }
+---
+#  Moq Hands-On — Exercise 1: Mocking MailSender
 
+## Objective
+
+To learn how to use **Moq** (a mocking library in .NET) to write unit tests **without calling real services** like an email server.
+
+---
+
+##  What is Moq?
+
+**Moq** is a library used in C# to create **fake objects** of interfaces or classes so that:
+- You can test logic without calling real services (like a real mail server or database)
+- Your tests are faster, safer, and focused only on your code
+
+---
+
+## ✅ Questions Asked and Answers 
+
+### 1.  Why use Moq?
+** Answer:**  
+To test code that depends on other classes (like MailSender) without calling the real class.
+
+---
+
+### 2.  What was mocked in this exercise?
+**Answer:**  
+We mocked the `IMailSender` interface, which normally sends emails. Instead, we made it return `true` without actually sending anything.
+
+---
+
+### 3. What is being tested?
+** Answer:**  
+We are testing whether `CustomerComm.SendMailToCustomer()` works properly when `SendMail()` returns `true`.
+
+---
+
+### 4.  Why not use the real `MailSender`?
+** Answer:**  
+Because we don't want to send real emails every time we test. Also, if the network fails, the test will fail for no reason.
+
+---
+
+### 5.  What does `It.IsAny<string>()` mean?
+** Answer:**  
+It tells Moq to accept any string value as a valid input when setting up the mock.
+
+---
+
+##  Code Summary
+
+### Interface
+
+```csharp
+public interface IMailSender
+{
+    bool SendMail(string toAddress, string message);
+}
 
 
 
