@@ -273,6 +273,67 @@ Using Optimized Iterative Approach:
 Forecasted value: 2147.80
 ---
 
+# Week 2 – Advanced SQL | NUnit | Moq
+
+This week covers practical applications of Advanced SQL concepts through two exercises: Window Functions and Multi-level Aggregation. These exercises simulate real-world scenarios often used in analytics and reporting.
+
+---
+
+## Exercise 1: Ranking and Window Functions
+
+### Concepts Covered
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
+- PARTITION BY
+- ORDER BY with OVER()
+
+### Objective
+To identify the top 3 most expensive products within each category using different ranking functions. This helps in understanding how SQL handles ranking, ordering, and ties in grouped data.
+
+### Requirements
+- SQL Server Express (2022 or later)
+- SQL Server Management Studio (SSMS)
+
+### How to Run
+1. Install SQL Server Express from the official Microsoft website.
+2. Install SQL Server Management Studio (SSMS).
+3. Launch SSMS and connect using your local server name (e.g., `.\SQLEXPRESS`).
+4. Create a database (e.g., `RetailStore`) and execute the SQL queries in a new query tab.
+
+---
+
+## Exercise 2: Aggregation with GROUPING SETS, CUBE, and ROLLUP
+
+### Concepts Covered
+- GROUPING SETS
+- ROLLUP
+- CUBE
+- GROUPING() function
+- GROUP BY extensions
+
+### Objective
+To perform advanced aggregation that allows multiple levels of summary in a single query. These techniques are useful for generating reports with subtotals and grand totals.
+
+### Requirements
+- SQL Server Express (2022 or later)
+- SQL Server Management Studio (SSMS)
+
+### How to Run
+1. Use the same SQL Server and SSMS setup from Exercise 1.
+2. Use the existing `RetailStore` database.
+3. Open a new query window and run aggregation queries using ROLLUP, CUBE, and GROUPING SETS.
+
+---
+
+## Tools Used
+- SQL Server 2022 Express
+- SQL Server Management Studio (SSMS)
+- Windows Authentication for local development
+
+---
+
+
 
 
 
