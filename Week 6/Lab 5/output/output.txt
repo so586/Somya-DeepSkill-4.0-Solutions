@@ -1,0 +1,1 @@
+Output: Dashboard shows 6 cohorts styled with colors based on status.
